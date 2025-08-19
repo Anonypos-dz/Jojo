@@ -16,18 +16,19 @@ from jojo import Jojo as jj
 # Create a page with a title
 page = jj("My First Page")
 
-# Add an H1 heading
-page.head_add_element("h1", "Welcome to my page")
+# Add an elements to the head
+page.head_add_element(name="link",attributes="rel='stylesheet' herf='style.css'")
+page.head_add_element(name="link",attributes="rel='icon' herf='icon.ico'")
 
 # Add a paragraph
-page.body_add_element("p", "This is an example paragraph.")
+page.body_add_element(name="p", content="This is an example paragraph.",attributes="id='hi' onclick='alert(0)'")
 
 # Add a table
 page.add_table(
     rows=[
         ["Name", "Age", "City"],
-        ["Alice", "30", "Paris"],
-        ["Bob", "25", "Lyon"]
+        ["Alice", "30", "NY"],
+        ["Bob", "25", "Paris"]
     ],
     table_attributes="class='table'"
 )
