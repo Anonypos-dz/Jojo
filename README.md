@@ -36,3 +36,5 @@ page.add_table(
 # Get the HTML code
 html_code = page.get_page()
 print(html_code)
+```
+# This is the first version of my lib :)
